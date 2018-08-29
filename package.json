@@ -2,16 +2,22 @@
   "name": "webserver",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "server/app.js",
   "scripts": {
-    "start": "node app.js",
-    "nodemon": "nodemon app.js",
+    "start": "node server/app.js",
+    "nodemon": "nodemon server/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
-    "hbs": "^4.0.1"
+    "hbs": "^4.0.1",
+    "bcrypt": "^3.0.0",
+    "body-parser": "^1.18.3",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.2.9",
+    "mongoose-unique-validator": "^2.0.1",
+    "underscore": "^1.9.1"
   }
 }
