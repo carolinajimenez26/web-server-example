@@ -3,7 +3,8 @@ require('./config/config');
 const express = require('express'),
       app = express(),
       bodyParser = require('body-parser'),
-      mongoose = require('mongoose');
+      mongoose = require('mongoose'),
+      path = require('path');
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -13,6 +14,9 @@ app.use(bodyParser.json());
 
 // global config of routes
 app.use(require('./routes/index'));
+
+app.use(express.static(path.join(__dirname, '../public')));
+
 
 mongoose.connect(process.env.URLDB, (err, res) => {
     if (err) throw err;

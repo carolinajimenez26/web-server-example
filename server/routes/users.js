@@ -55,7 +55,7 @@ app.post('/users', [verifyToken, verifyAdmin], (req, res) => {
 
 app.put('/users/:id', [verifyToken, verifyAdmin], (req, res) => {
     let id = req.params.id;
-    let body = _.pick(req.body, ['name', 'lastname', 'email', 'img', 'role', 'state']);
+    let body = _.pick(req.body, ['name', 'email', 'image', 'role', 'state']);
     let ops = {
         new: true,
         runValidators: true
