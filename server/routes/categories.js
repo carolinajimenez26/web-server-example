@@ -20,7 +20,7 @@ app.get('/categories', verifyToken, (req, res) => {
         return res.status(400).json({
             ok: false,
             err: {
-              message: "Categories couldn't be find"
+              message: "Categories couldn't be found"
             }
         });
     }
@@ -47,7 +47,7 @@ app.get('/categories/:id', verifyToken, (req, res) => {
           return res.status(400).json({
               ok: false,
               err: {
-                message: "Category couldn't be find"
+                message: "Category couldn't be found"
               }
           });
       }
