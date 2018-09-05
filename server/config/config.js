@@ -19,8 +19,7 @@ process.env.URLDB = mongoUrl;
 /**************WEB TOKENS************/
 
 // expire date
-// 60 seconds, 60 minutes, 20 hour, 30 days
-process.env.TOKEN_EXPIRES = 60 * 60 * 24 * 30;
+process.env.TOKEN_EXPIRES = '48h';
 
 // seed for jwt
 process.env.TOKEN_SEED = process.env.TOKEN_SEED || 'super-secret';

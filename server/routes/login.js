@@ -99,7 +99,6 @@ app.post('/google', async (req, res) => {
         });
       }
     } else { // New user
-      console.log("hola");
       let user = new User();
       user.name = googleUser.name;
       user.email = googleUser.email;
